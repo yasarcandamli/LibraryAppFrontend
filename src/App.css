@@ -1,0 +1,298 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+body,
+#root,
+.container {
+  height: 100vh;
+}
+input {
+  box-sizing: border-box;
+}
+
+/* ------------------------------ LIST CSS ------------------------------ */
+/* Genel Stil */
+
+.list {
+  padding: 20px;
+}
+
+/* Başlık */
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Yeni Yayıncı Ekle Butonu */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Tablo Genel Stil */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Tablo Başlıkları */
+thead tr {
+  background-color: #4caf50;
+  color: white;
+  text-align: left;
+}
+
+thead th {
+  padding: 12px;
+  font-size: 14px;
+}
+
+/* Tablo Satırları */
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Tablo Hücreler */
+td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+
+td:last-child {
+  text-align: center;
+}
+
+th:last-child {
+  text-align: center;
+}
+
+/* Eylem Butonları */
+td button {
+  margin: 5px;
+  padding: 8px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: auto;
+}
+
+td > p {
+  margin: auto;
+}
+
+td button:nth-child(1) {
+  background-color: #2196f3;
+  color: white;
+}
+
+td button:nth-child(1):hover {
+  background-color: #0b7dda;
+}
+
+td button:nth-child(2) {
+  background-color: #ffa726;
+  color: white;
+}
+
+td button:nth-child(2):hover {
+  background-color: #fb8c00;
+}
+
+td button:nth-child(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+td button:nth-child(3):hover {
+  background-color: #e53935;
+}
+
+/* ------------------------------ DETAIL CSS ------------------------------ */
+.detail {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Başlık */
+h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Detay Bilgileri */
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+/* Etiketler (strong) */
+strong {
+  color: #333;
+  font-weight: bold;
+}
+
+/* Detay Sayfası İçin Özel Stil */
+div > p {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 5px solid #4caf50;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+
+div p:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+/* ------------------------------ EDIT CSS ------------------------------ */
+/* Form Alanı */
+.form {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Başlık */
+h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Etiketleri */
+label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Form Input ve Select Alanları */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f7f7f7;
+}
+
+/* Checkbox Alanları */
+div input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Submit Button */
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Genel Form Düzeni */
+form div {
+  margin-bottom: 20px;
+}
+
+.category-input {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.category-input > label {
+  width: 100%;
+}
+
+.category-checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-checkbox input {
+  margin-right: 8px;
+  width: 16px; /* Genişlik */
+  height: 16px; /* Yükseklik */
+}
+
+.category-checkbox label {
+  padding-top: 8px;
+  display: inline-flex; /* Label'ın içinde tüm öğeleri hizalamaya yardımcı olur */
+  align-items: center; /* Etiketin içindeki metni de düzgün hizalar */
+  font-size: 16px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 600px) {
+  form {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+}
