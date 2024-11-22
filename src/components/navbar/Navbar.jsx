@@ -6,22 +6,22 @@ const Navbar = () => {
         <nav className="navbar">
             <ul className="nav-list">
                 <li className="nav-list-item">
-                    <Link to="/" className="nav-link">Ana Sayfa</Link>
+                    <Link to="/" className="nav-link">🏠 Ana Sayfa</Link>
                 </li>
                 <li className="nav-list-item">
-                    <Link to="/publishers" className="nav-link">Yayınevleri</Link>
+                    <Link to="/publishers" className="nav-link">📚 Yayınevleri</Link>
                 </li>
                 <li className="nav-list-item">
-                    <Link to="/categories" className="nav-link">Kategoriler</Link>
+                    <Link to="/categories" className="nav-link">🗂️ Kategoriler</Link>
                 </li>
                 <li className="nav-list-item">
-                    <Link to="/authors" className="nav-link">Yazarlar</Link>
+                    <Link to="/authors" className="nav-link">✍️ Yazarlar</Link>
                 </li>
                 <li className="nav-list-item">
-                    <Link to="/books" className="nav-link">Kitaplar</Link>
+                    <Link to="/books" className="nav-link">📖 Kitaplar</Link>
                 </li>
                 <li className="nav-list-item">
-                    <Link to="/borrows" className="nav-link">Ödünç Alma</Link>
+                    <Link to="/borrows" className="nav-link">🛒 Ödünç Alma</Link>
                 </li>
             </ul>
         </nav>
