@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getPublisherById, updatePublisherById } from '../../services/publisherService';
+import { getPublisherById, updatePublisherById } from '../../services/PublisherService';
 import { toast } from 'react-toastify';
 
 const UpdatePublisherForm = () => {

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { createBook } from "../../services/BookService";
 import { getAuthors } from "../../services/AuthorService";
-import { getPublishers } from "../../services/publisherService";
+import { getPublishers } from "../../services/PublisherService";
 import { getCategories } from "../../services/CategoryService";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';

@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { PublisherContext } from "../../context/PublisherContext";
 import { useParams } from "react-router-dom";
-import { getPublisherById } from "../../services/publisherService";
+import { getPublisherById } from "../../services/PublisherService";
 
 const PublisherDetail = () => {
     const { id } = useParams();

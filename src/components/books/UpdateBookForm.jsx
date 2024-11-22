@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getBookById, updateBookById } from '../../services/BookService';
 import { getAuthors } from '../../services/AuthorService';
-import { getPublishers } from '../../services/publisherService';
+import { getPublishers } from '../../services/PublisherService';
 import { getCategories } from '../../services/CategoryService';
 import { toast } from 'react-toastify';
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createPublisher } from "../../services/publisherService";
+import { createPublisher } from "../../services/PublisherService";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 

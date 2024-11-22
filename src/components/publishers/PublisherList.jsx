@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
 import { PublisherContext } from "../../context/PublisherContext";
 import { useNavigate } from "react-router-dom";
-import { getPublishers, deletePublisherById } from "../../services/publisherService";
+import { getPublishers, deletePublisherById } from "../../services/PublisherService";
 import { toast } from 'react-toastify';
 
 const PublisherList = () => {
