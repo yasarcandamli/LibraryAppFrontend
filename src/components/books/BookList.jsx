@@ -8,6 +8,7 @@ const BookList = () => {
     const { books, updateBooks, removeBookById } = useContext(BookContext);
     const navigate = useNavigate();
 
+    // With useEffect, we get the books from the API when the component is loaded.
     useEffect(() => {
         const fetchBooks = async () => {
             try {
@@ -26,6 +27,7 @@ const BookList = () => {
         fetchBooks();
     }, [updateBooks]);
 
+    // Deleting the book
     const handleDelete = async (id) => {
         try {
             const isDeleted = await deleteBookById(id);
@@ -43,10 +45,12 @@ const BookList = () => {
 
     };
 
+    // Go to the book's edit page
     const handleEdit = (id) => {
         navigate(`/books/${id}/edit`);
     };
 
+    // Go to the book's detail page
     const handleDetail = (id) => {
         navigate(`/books/${id}`);
     };

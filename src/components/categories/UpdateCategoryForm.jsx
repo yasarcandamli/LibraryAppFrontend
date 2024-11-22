@@ -11,6 +11,7 @@ const UpdateCategoryForm = () => {
         description: '',
     });
 
+    // UseEffect hook that gets category information and fills the form
     useEffect(() => {
         const fetchCategory = async () => {
             try {
@@ -28,12 +29,16 @@ const UpdateCategoryForm = () => {
         fetchCategory();
     }, [id]);
 
+    // Function that binds values from form field to state
     const handleChange = (e) => {
         setCategory({ ...category, [e.target.name]: e.target.value });
     };
 
+    // Function to run when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!category.name || !category.description) {
             toast.error("Lütfen tüm alanları doldurun.");
             return;
@@ -41,6 +46,8 @@ const UpdateCategoryForm = () => {
 
         try {
             const data = await getCategoryById(id);
+
+            // If the category data and form data are the same, it informs that no changes have been made
             if (
                 data.name === category.name &&
                 data.description === category.description
@@ -49,7 +56,7 @@ const UpdateCategoryForm = () => {
                 return;
             }
 
-
+            // Updates category information by calling the Update API
             const response = await updateCategoryById(id, category);
             if (response) {
                 toast.success("Kategori başarıyla güncellendi!");

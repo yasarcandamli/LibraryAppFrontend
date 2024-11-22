@@ -7,16 +7,17 @@ const PublisherDetail = () => {
     const { id } = useParams();
     const { publisher, updatePublisher } = useContext(PublisherContext);
 
+    // UseEffect hook to get publisher information from API
     useEffect(() => {
         const fetchPublisher = async () => {
             try {
-                const data = await getPublisherById(id);
+                const data = await getPublisherById(id); // Pull publisher information via API
                 updatePublisher(data);
             } catch (error) {
                 toast.error("Yayınevi bilgileri alınamadı:", error);
             }
         };
-        fetchPublisher();
+        fetchPublisher(); // API call
     }, [id, updatePublisher]);
 
     return (

@@ -14,6 +14,7 @@ const CreateBorrowForm = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    // UseEffect hook to get book data
     useEffect(() => {
         const fetchBooks = async () => {
             try {
@@ -27,9 +28,11 @@ const CreateBorrowForm = () => {
         fetchBooks();
     }, []);
 
+    // handleSubmit function triggered when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
 
+        // Checks if the required fields are filled
         if (!borrowerName || !borrowerMail || !borrowingDate || !bookId) {
             setError("Lütfen tüm alanları doldurun.");
             toast.error("Lütfen tüm alanları doldurun.");
@@ -43,7 +46,8 @@ const CreateBorrowForm = () => {
                 borrowingDate,
                 bookForBorrowingRequest: { id: parseInt(bookId) },
             };
-            const response = await createBorrow(newBorrow);
+
+            const response = await createBorrow(newBorrow); // API call to add a borrow
             if (response) {
                 toast.success("Ödünç alma işlemi başarılı!");
                 navigate("/borrows");

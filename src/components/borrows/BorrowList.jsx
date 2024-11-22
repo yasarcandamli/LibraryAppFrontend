@@ -8,6 +8,7 @@ const BorrowList = () => {
     const { borrows, updateBorrows, removeBorrowById } = useContext(BorrowContext);
     const navigate = useNavigate();
 
+    // With useEffect, we get the borrows from the API when the component is loaded.
     useEffect(() => {
         const fetchBorrows = async () => {
             try {
@@ -26,6 +27,7 @@ const BorrowList = () => {
         fetchBorrows();
     }, [updateBorrows]);
 
+    // Deleting the borrow
     const handleDelete = async (id) => {
         try {
             const isDeleted = await deleteBorrowById(id);
@@ -41,10 +43,12 @@ const BorrowList = () => {
         }
     };
 
+    // Go to the borrow's edit page
     const handleEdit = (id) => {
         navigate(`/borrows/${id}/edit`);
     };
 
+    // Go to the borrow's detail page
     const handleDetail = (id) => {
         navigate(`/borrows/${id}`);
     };

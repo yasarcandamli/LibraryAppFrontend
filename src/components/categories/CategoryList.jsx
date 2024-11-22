@@ -8,6 +8,7 @@ const CategoryList = () => {
     const { categories, updateCategories, removeCategoryById } = useContext(CategoryContext);
     const navigate = useNavigate();
 
+    // With useEffect, we get the categories from the API when the component is loaded.
     useEffect(() => {
         const fetchCategories = async () => {
             try {
@@ -26,6 +27,7 @@ const CategoryList = () => {
         fetchCategories();
     }, [updateCategories]);
 
+    // Deleting the category
     const handleDelete = async (id) => {
         try {
             const isDeleted = await deleteCategoryById(id);
@@ -42,10 +44,12 @@ const CategoryList = () => {
 
     };
 
+    // Go to the category's edit page
     const handleEdit = (id) => {
         navigate(`/categories/${id}/edit`);
     };
 
+    // Go to the category's detail page
     const handleDetail = (id) => {
         navigate(`/categories/${id}`);
     };

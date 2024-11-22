@@ -10,8 +10,11 @@ const CreateAuthorForm = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    // handleSubmit function triggered when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!name || !birthDate || !country) {
             setError("Lütfen tüm alanları doldurun.");
             toast.error("Lütfen tüm alanları doldurun.");
@@ -20,7 +23,7 @@ const CreateAuthorForm = () => {
 
         try {
             const newAuthor = { name, birthDate, country };
-            const response = await createAuthor(newAuthor);
+            const response = await createAuthor(newAuthor); // API call to add a author
             if (response) {
                 toast.success("Yazar eklendi!");
                 navigate("/authors");

@@ -12,6 +12,7 @@ const UpdateAuthorForm = () => {
         country: '',
     });
 
+    // UseEffect hook that gets author information and fills the form
     useEffect(() => {
         const fetchAuthor = async () => {
             try {
@@ -29,12 +30,16 @@ const UpdateAuthorForm = () => {
         fetchAuthor();
     }, [id]);
 
+    // Function that binds values from form field to state
     const handleChange = (e) => {
         setAuthor({ ...author, [e.target.name]: e.target.value });
     };
 
+    // Function to run when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!author.name || !author.birthDate || !author.country) {
             toast.error("Lütfen tüm alanları doldurun.");
             return;
@@ -42,6 +47,8 @@ const UpdateAuthorForm = () => {
 
         try {
             const data = await getAuthorById(id);
+
+            // If the author data and form data are the same, it informs that no changes have been made
             if (
                 data.name === author.name &&
                 data.birthDate === author.birthDate &&
@@ -51,7 +58,7 @@ const UpdateAuthorForm = () => {
                 return;
             }
 
-
+            // Updates author information by calling the Update API
             const response = await updateAuthorById(id, author);
             if (response) {
                 toast.success("Yazar başarıyla güncellendi!");

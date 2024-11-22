@@ -4,6 +4,7 @@ import PublisherDetail from '../components/publishers/PublisherDetail';
 import CreatePublisherForm from '../components/publishers/CreatePublisherForm';
 import UpdatePublisherForm from '../components/publishers/UpdatePublisherForm';
 
+// Defines the routes for managing publishers, including listing, creating, viewing, and updating publishers
 const PublisherRoutes = () => (
     <Routes>
         <Route path="/" element={<PublisherList />} />

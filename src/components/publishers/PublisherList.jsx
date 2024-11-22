@@ -8,6 +8,7 @@ const PublisherList = () => {
     const { publishers, updatePublishers, removePublisherById } = useContext(PublisherContext);
     const navigate = useNavigate();
 
+    // With useEffect, we get the publishers from the API when the component is loaded.
     useEffect(() => {
         const fetchPublishers = async () => {
             try {
@@ -26,6 +27,7 @@ const PublisherList = () => {
         fetchPublishers();
     }, [updatePublishers]);
 
+    // Deleting the publisher
     const handleDelete = async (id) => {
         try {
             const isDeleted = await deletePublisherById(id);
@@ -42,10 +44,12 @@ const PublisherList = () => {
         }
     };
 
+    // Go to the publisher's edit page
     const handleEdit = (id) => {
         navigate(`/publishers/${id}/edit`);
     };
 
+    // Go to the publisher's detail page
     const handleDetail = (id) => {
         navigate(`/publishers/${id}`);
     };

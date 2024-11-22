@@ -23,6 +23,7 @@ const UpdateBookForm = () => {
     const [publishers, setPublishers] = useState([]);
     const [categories, setCategories] = useState([]);
 
+    // UseEffect hook that gets book information and fills the form
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -53,11 +54,13 @@ const UpdateBookForm = () => {
         fetchData();
     }, [id]);
 
+    // Function that binds values from form field to state
     const handleChange = (e) => {
         const { name, value } = e.target;
         setBook((prev) => ({ ...prev, [name]: value }));
     };
 
+    // Function that handles the change in category selection (checkboxes)
     const handleCategoryChange = (e) => {
         const categoryId = parseInt(e.target.value);
         setBook((prev) => {
@@ -78,14 +81,18 @@ const UpdateBookForm = () => {
         });
     };
 
+    // Compares two category arrays to check if they are the same, by comparing their IDs after sorting them
     const areCategoriesEqual = (categories1, categories2) => {
         const ids1 = categories1.map((cat) => cat.id).sort();
         const ids2 = categories2.map((cat) => cat.id).sort();
         return JSON.stringify(ids1) === JSON.stringify(ids2);
     };
 
+    // Function to run when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!book.name || !book.publicationYear || !book.stock || !book.authorId || !book.publisherId || book.categoryIds.length === 0) {
             toast.error("Lütfen tüm alanları doldurun.");
             return;
@@ -94,6 +101,7 @@ const UpdateBookForm = () => {
         try {
             const data = await getBookById(id);
 
+            // If the book data and form data are the same, it informs that no changes have been made
             if (
                 data.name === book.name &&
                 data.publicationYear === book.publicationYear &&

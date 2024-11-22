@@ -4,6 +4,7 @@ import AuthorDetail from '../components/authors/AuthorDetail';
 import CreateAuthorForm from '../components/authors/CreateAuthorForm';
 import UpdateAuthorForm from '../components/authors/UpdateAuthorForm';
 
+// Defines the routes for managing authors, including listing, creating, viewing, and updating authors
 const AuthorRoutes = () => (
     <Routes>
         <Route path="/" element={<AuthorList />} />

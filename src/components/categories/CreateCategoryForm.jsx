@@ -9,8 +9,11 @@ const CreateCategoryForm = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    // handleSubmit function triggered when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!name || !description) {
             setError("Lütfen tüm alanları doldurun.");
             toast.error("Lütfen tüm alanları doldurun.");
@@ -19,7 +22,7 @@ const CreateCategoryForm = () => {
 
         try {
             const newCategory = { name, description };
-            const response = await createCategory(newCategory);
+            const response = await createCategory(newCategory); // API call to add a category
             if (response) {
                 toast.success("Kategori eklendi!");
                 navigate("/categories");

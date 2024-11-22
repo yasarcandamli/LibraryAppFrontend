@@ -12,6 +12,7 @@ const UpdatePublisherForm = () => {
         address: '',
     });
 
+    // UseEffect hook that gets publisher information and fills the form
     useEffect(() => {
         const fetchPublisher = async () => {
             try {
@@ -29,12 +30,16 @@ const UpdatePublisherForm = () => {
         fetchPublisher();
     }, [id]);
 
+    // Function that binds values from form field to state
     const handleChange = (e) => {
         setPublisher({ ...publisher, [e.target.name]: e.target.value });
     };
 
+    // Function to run when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!publisher.name || !publisher.establishmentYear || !publisher.address) {
             toast.error("Lütfen tüm alanları doldurun.");
             return;
@@ -42,6 +47,8 @@ const UpdatePublisherForm = () => {
 
         try {
             const data = await getPublisherById(id);
+
+            // If the publisher data and form data are the same, it informs that no changes have been made
             if (
                 data.name === publisher.name &&
                 data.establishmentYear === publisher.establishmentYear &&
@@ -51,6 +58,7 @@ const UpdatePublisherForm = () => {
                 return;
             }
 
+            // Updates publisher information by calling the Update API
             const response = await updatePublisherById(id, publisher);
             if (response) {
                 toast.success("Yayınevi başarıyla güncellendi!");

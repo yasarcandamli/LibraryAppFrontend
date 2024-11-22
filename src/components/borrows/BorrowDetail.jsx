@@ -8,16 +8,17 @@ const BorrowDetail = () => {
     const { id } = useParams();
     const { borrow, updateBorrow } = useContext(BorrowContext);
 
+    // UseEffect hook to get borrow information from API
     useEffect(() => {
         const fetchBorrow = async () => {
             try {
-                const data = await getBorrowById(id);
+                const data = await getBorrowById(id); // Pull borrow information via API
                 updateBorrow(data);
             } catch (error) {
                 toast.error("Ödünç alma bilgileri alınamadı:", error);
             }
         };
-        fetchBorrow();
+        fetchBorrow(); // API call
     }, [id, updateBorrow]);
 
     return (

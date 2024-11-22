@@ -13,6 +13,7 @@ const UpdateBorrowForm = () => {
         returnDate: "",
     });
 
+    // UseEffect hook that gets borrow information and fills the form
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -34,13 +35,17 @@ const UpdateBorrowForm = () => {
         fetchData();
     }, [id]);
 
+    // Function that binds values from form field to state
     const handleChange = (e) => {
         const { name, value } = e.target;
         setBorrow((prev) => ({ ...prev, [name]: value }));
     };
 
+    // Function to run when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!borrow.borrowerName || !borrow.borrowingDate) {
             toast.error("Lütfen zorunlu alanları doldurun.");
             return;
@@ -48,6 +53,8 @@ const UpdateBorrowForm = () => {
 
         try {
             const data = await getBorrowById(id);
+
+            // If the borrow data and form data are the same, it informs that no changes have been made
             if (
                 data.borrowerName === borrow.borrowerName &&
                 data.borrowingDate === borrow.borrowingDate &&
@@ -57,6 +64,7 @@ const UpdateBorrowForm = () => {
                 return;
             }
 
+            // Updates borrow information by calling the Update API
             const response = await updateBorrowById(id, borrow);
             if (response) {
                 toast.success("Ödünç alma verileri başarıyla güncellendi!");

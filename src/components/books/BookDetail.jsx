@@ -8,16 +8,17 @@ const BookDetail = () => {
     const { id } = useParams();
     const { book, updateBook } = useContext(BookContext);
 
+    // UseEffect hook to get book information from API
     useEffect(() => {
         const fetchBook = async () => {
             try {
-                const data = await getBookById(id);
+                const data = await getBookById(id); // Pull book information via API
                 updateBook(data);
             } catch (error) {
                 toast.error("Kitap bilgileri alınamadı:", error);
             }
         };
-        fetchBook();
+        fetchBook(); // API call
     }, [id, updateBook]);
 
     return (

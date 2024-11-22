@@ -4,7 +4,7 @@ import './Home.styles.css';
 const Home = () => {
     return (
         <div className="home">
-            <h1 className="home-title">Library App'e Hoş Geldiniz</h1>
+            <h1 className="home-title">Library Management System'e Hoş Geldiniz</h1>
             <ul className="management-list">
                 <li>
                     <Link to="/publishers" className="management-link">

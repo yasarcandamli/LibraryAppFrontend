@@ -4,6 +4,7 @@ import CategoryDetail from '../components/categories/CategoryDetail';
 import CreateCategoryForm from '../components/categories/CreateCategoryForm';
 import UpdateCategoryForm from '../components/categories/UpdateCategoryForm';
 
+// Defines the routes for managing categories, including listing, creating, viewing, and updating categories
 const PublisherRoutes = () => (
     <Routes>
         <Route path="/" element={<CategoryList />} />

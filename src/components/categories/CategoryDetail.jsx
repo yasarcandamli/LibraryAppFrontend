@@ -7,16 +7,17 @@ const CategoryDetail = () => {
     const { id } = useParams();
     const { category, updateCategory } = useContext(CategoryContext);
 
+    // UseEffect hook to get category information from API
     useEffect(() => {
         const fetchCategory = async () => {
             try {
-                const data = await getCategoryById(id);
+                const data = await getCategoryById(id); // Pull category information via API
                 updateCategory(data);
             } catch (error) {
                 toast.error("Kategori bilgileri alınamadı:", error);
             }
         };
-        fetchCategory();
+        fetchCategory(); // API call
     }, [id, updateCategory]);
 
     return (

@@ -7,16 +7,17 @@ const AuthorDetail = () => {
     const { id } = useParams();
     const { author, updateAuthor } = useContext(AuthorContext);
 
+    // UseEffect hook to get author information from API
     useEffect(() => {
         const fetchAuthor = async () => {
             try {
-                const data = await getAuthorById(id);
+                const data = await getAuthorById(id); // Pull author information via API
                 updateAuthor(data);
             } catch (error) {
                 toast.error("Yazar bilgileri alınamadı:", error);
             }
         };
-        fetchAuthor();
+        fetchAuthor(); // API call
     }, [id, updateAuthor]);
 
     return (

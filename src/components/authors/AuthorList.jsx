@@ -8,6 +8,7 @@ const AuthorList = () => {
     const { authors, updateAuthors, removeAuthorById } = useContext(AuthorContext);
     const navigate = useNavigate();
 
+    // With useEffect, we get the authors from the API when the component is loaded.
     useEffect(() => {
         const fetchAuthors = async () => {
             try {
@@ -26,6 +27,7 @@ const AuthorList = () => {
         fetchAuthors();
     }, [updateAuthors]);
 
+    // Deleting the author
     const handleDelete = async (id) => {
         try {
             const isDeleted = await deleteAuthorById(id);
@@ -42,10 +44,12 @@ const AuthorList = () => {
 
     };
 
+    // Go to the author's edit page
     const handleEdit = (id) => {
         navigate(`/authors/${id}/edit`);
     };
 
+    // Go to the author's detail page
     const handleDetail = (id) => {
         navigate(`/authors/${id}`);
     };

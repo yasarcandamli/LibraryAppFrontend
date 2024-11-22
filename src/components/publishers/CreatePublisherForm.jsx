@@ -10,8 +10,11 @@ const CreatePublisherForm = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    // handleSubmit function triggered when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!name || !establishmentYear || !address) {
             setError("Lütfen tüm alanları doldurun.");
             toast.error("Lütfen tüm alanları doldurun.");
@@ -20,7 +23,7 @@ const CreatePublisherForm = () => {
 
         try {
             const newPublisher = { name, establishmentYear: parseInt(establishmentYear), address };
-            const response = await createPublisher(newPublisher);
+            const response = await createPublisher(newPublisher); // API call to add a publisher
             if (response) {
                 toast.success("Yayınevi başarıyla eklendi!");
                 navigate("/publishers");

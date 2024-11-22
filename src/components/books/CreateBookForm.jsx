@@ -20,6 +20,7 @@ const CreateBookForm = () => {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    // UseEffect hook to get authors, publishers and categories
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -34,8 +35,11 @@ const CreateBookForm = () => {
         fetchData();
     }, []);
 
+    // handleSubmit function triggered when the form is submitted
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Checks if the required fields are filled
         if (!name || !publicationYear || !stock || !authorId || !publisherId || categoryIds.length === 0) {
             setError("Lütfen tüm alanları doldurun.");
             toast.error("Lütfen tüm alanları doldurun.");
@@ -51,7 +55,7 @@ const CreateBookForm = () => {
                 publisher: { id: parseInt(publisherId) },
                 categories: categoryIds.map(id => ({ id: parseInt(id) }))
             };
-            const response = await createBook(newBook);
+            const response = await createBook(newBook); // API call to add a book
             if (response) {
                 toast.success("Kitap başarıyla eklendi!");
                 navigate("/books");
