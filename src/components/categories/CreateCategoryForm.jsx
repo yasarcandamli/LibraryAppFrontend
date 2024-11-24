@@ -3,6 +3,7 @@ import { createCategory } from "../../services/CategoryService";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 7
 const CreateCategoryForm = () => {
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");

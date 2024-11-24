@@ -4,6 +4,7 @@ import { getBooks } from "../../services/BookService";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
+// DEĞERLENDİRME 10
 const CreateBorrowForm = () => {
     const [borrowerName, setBorrowerName] = useState("");
     const [borrowerMail, setBorrowerMail] = useState("");

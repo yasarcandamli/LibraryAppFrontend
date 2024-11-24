@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getBooks, deleteBookById } from "../../services/BookService";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 8
 const BookList = () => {
     const { books, updateBooks, removeBookById } = useContext(BookContext);
     const navigate = useNavigate();

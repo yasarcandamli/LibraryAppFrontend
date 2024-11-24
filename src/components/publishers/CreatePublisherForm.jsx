@@ -3,6 +3,7 @@ import { createPublisher } from "../../services/PublisherService";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 6
 const CreatePublisherForm = () => {
     const [name, setName] = useState("");
     const [establishmentYear, setEstablishmentYear] = useState("");

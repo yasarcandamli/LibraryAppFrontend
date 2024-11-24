@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getAuthors, deleteAuthorById } from "../../services/AuthorService";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 9
 const AuthorList = () => {
     const { authors, updateAuthors, removeAuthorById } = useContext(AuthorContext);
     const navigate = useNavigate();

@@ -6,6 +6,7 @@ import { getCategories } from "../../services/CategoryService";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 8
 const CreateBookForm = () => {
     const [name, setName] = useState("");
     const [publicationYear, setPublicationYear] = useState("");

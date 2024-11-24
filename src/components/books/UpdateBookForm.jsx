@@ -6,6 +6,7 @@ import { getPublishers } from '../../services/PublisherService';
 import { getCategories } from '../../services/CategoryService';
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 8
 const UpdateBookForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();

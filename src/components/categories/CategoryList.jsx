@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getCategories, deleteCategoryById } from "../../services/CategoryService";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 7
 const CategoryList = () => {
     const { categories, updateCategories, removeCategoryById } = useContext(CategoryContext);
     const navigate = useNavigate();

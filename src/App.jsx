@@ -18,6 +18,7 @@ import './App.css'
 function App() {
 
   return (
+    // DEĞERLENDİRME 5
     <Router>
       <ToastContainer />
       <div className="container">

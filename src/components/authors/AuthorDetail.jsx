@@ -3,6 +3,7 @@ import { AuthorContext } from "../../context/AuthorContext";
 import { useParams } from "react-router-dom";
 import { getAuthorById } from "../../services/AuthorService";
 
+// DEĞERLENDİRME 9
 const AuthorDetail = () => {
     const { id } = useParams();
     const { author, updateAuthor } = useContext(AuthorContext);

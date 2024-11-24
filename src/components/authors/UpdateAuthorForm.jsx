@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getAuthorById, updateAuthorById } from '../../services/AuthorService';
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 9
 const UpdateAuthorForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();

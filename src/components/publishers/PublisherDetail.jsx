@@ -3,6 +3,7 @@ import { PublisherContext } from "../../context/PublisherContext";
 import { useParams } from "react-router-dom";
 import { getPublisherById } from "../../services/PublisherService";
 
+// DEĞERLENDİRME 6
 const PublisherDetail = () => {
     const { id } = useParams();
     const { publisher, updatePublisher } = useContext(PublisherContext);

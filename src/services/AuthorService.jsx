@@ -3,6 +3,7 @@ import axios from 'axios';
 const BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL; // API, from environmental variables 
 const API_URL = `${BASE_URL}/api/v1/authors`; // Core API endpoint for Authors
 
+// DEĞERLENDİRME 9
 // Function that brings all authors
 export const getAuthors = async () => {
     try {
@@ -13,6 +14,7 @@ export const getAuthors = async () => {
     }
 };
 
+// DEĞERLENDİRME 9
 // Function that creates a new author
 export const createAuthor = async (author) => {
     try {
@@ -23,6 +25,7 @@ export const createAuthor = async (author) => {
     }
 };
 
+// DEĞERLENDİRME 9
 // Function that retrieves information from a specific author
 export const getAuthorById = async (id) => {
     try {
@@ -33,6 +36,7 @@ export const getAuthorById = async (id) => {
     }
 };
 
+// DEĞERLENDİRME 9
 // Function that updates a specific author
 export const updateAuthorById = async (id, author) => {
     try {
@@ -43,6 +47,7 @@ export const updateAuthorById = async (id, author) => {
     }
 };
 
+// DEĞERLENDİRME 9
 // Function that deletes a specific author
 export const deleteAuthorById = async (id) => {
     try {

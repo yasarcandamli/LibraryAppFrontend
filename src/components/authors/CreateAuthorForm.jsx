@@ -3,6 +3,7 @@ import { createAuthor } from "../../services/AuthorService";
 import { useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 9
 const CreateAuthorForm = () => {
     const [name, setName] = useState("");
     const [birthDate, setBirthDate] = useState("");

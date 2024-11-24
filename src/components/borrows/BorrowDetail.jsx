@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getBorrowById } from "../../services/BorrowService";
 import { toast } from "react-toastify";
 
+// DEĞERLENDİRME 10
 const BorrowDetail = () => {
     const { id } = useParams();
     const { borrow, updateBorrow } = useContext(BorrowContext);

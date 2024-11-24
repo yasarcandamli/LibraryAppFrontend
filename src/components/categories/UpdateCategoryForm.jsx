@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getCategoryById, updateCategoryById } from '../../services/CategoryService';
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 7
 const UpdateCategoryForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();

@@ -3,6 +3,7 @@ import axios from 'axios';
 const BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL; // API, from environmental variables 
 const API_URL = `${BASE_URL}/api/v1/borrows`; // Core API endpoint for Borrows
 
+// DEĞERLENDİRME 10
 // Function that brings all borrows
 export const getBorrows = async () => {
     try {
@@ -13,6 +14,7 @@ export const getBorrows = async () => {
     }
 };
 
+// DEĞERLENDİRME 10
 // Function that creates a new borrow
 export const createBorrow = async (borrow) => {
     try {
@@ -23,6 +25,7 @@ export const createBorrow = async (borrow) => {
     }
 };
 
+// DEĞERLENDİRME 10
 // Function that retrieves information from a specific borrow
 export const getBorrowById = async (id) => {
     try {
@@ -33,6 +36,7 @@ export const getBorrowById = async (id) => {
     }
 };
 
+// DEĞERLENDİRME 10
 // Function that updates a specific borrow
 export const updateBorrowById = async (id, borrow) => {
     try {
@@ -43,6 +47,7 @@ export const updateBorrowById = async (id, borrow) => {
     }
 };
 
+// DEĞERLENDİRME 10
 // Function that deletes a specific borrow
 export const deleteBorrowById = async (id) => {
     try {

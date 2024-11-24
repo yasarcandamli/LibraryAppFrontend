@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getBorrowById, updateBorrowById } from "../../services/BorrowService";
 import { toast } from "react-toastify";
 
+// DEĞERLENDİRME 10
 const UpdateBorrowForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();

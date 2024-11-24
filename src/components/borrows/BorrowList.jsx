@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getBorrows, deleteBorrowById } from "../../services/BorrowService";
 import { toast } from "react-toastify";
 
+// DEĞERLENDİRME 10
 const BorrowList = () => {
     const { borrows, updateBorrows, removeBorrowById } = useContext(BorrowContext);
     const navigate = useNavigate();

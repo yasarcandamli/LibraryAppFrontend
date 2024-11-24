@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getPublishers, deletePublisherById } from "../../services/PublisherService";
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 6
 const PublisherList = () => {
     const { publishers, updatePublishers, removePublisherById } = useContext(PublisherContext);
     const navigate = useNavigate();

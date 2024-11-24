@@ -3,6 +3,7 @@ import axios from 'axios';
 const BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL; // API, from environmental variables
 const API_URL = `${BASE_URL}/api/v1/publishers`; // Core API endpoint for Publishers
 
+// DEĞERLENDİRME 6
 // Function that brings all publishers
 export const getPublishers = async () => {
     try {
@@ -13,6 +14,7 @@ export const getPublishers = async () => {
     }
 };
 
+// DEĞERLENDİRME 6
 // Function that creates a new publisher
 export const createPublisher = async (publisher) => {
     try {
@@ -23,6 +25,7 @@ export const createPublisher = async (publisher) => {
     }
 };
 
+// DEĞERLENDİRME 6
 // Function that retrieves information from a specific publisher
 export const getPublisherById = async (id) => {
     try {
@@ -33,6 +36,7 @@ export const getPublisherById = async (id) => {
     }
 };
 
+// DEĞERLENDİRME 6
 // Function that updates a specific publisher
 export const updatePublisherById = async (id, publisher) => {
     try {
@@ -43,6 +47,7 @@ export const updatePublisherById = async (id, publisher) => {
     }
 };
 
+// DEĞERLENDİRME 6
 // Function that deletes a specific publisher
 export const deletePublisherById = async (id) => {
     try {

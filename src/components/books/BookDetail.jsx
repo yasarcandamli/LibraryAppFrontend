@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { getBookById } from "../../services/BookService";
 import { toast } from "react-toastify";
 
+// DEĞERLENDİRME 8
 const BookDetail = () => {
     const { id } = useParams();
     const { book, updateBook } = useContext(BookContext);

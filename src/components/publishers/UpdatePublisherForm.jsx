@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { getPublisherById, updatePublisherById } from '../../services/PublisherService';
 import { toast } from 'react-toastify';
 
+// DEĞERLENDİRME 6
 const UpdatePublisherForm = () => {
     const { id } = useParams();
     const navigate = useNavigate();

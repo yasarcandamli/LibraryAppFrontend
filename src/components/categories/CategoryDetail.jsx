@@ -3,6 +3,7 @@ import { CategoryContext } from "../../context/CategoryContext";
 import { useParams } from "react-router-dom";
 import { getCategoryById } from "../../services/CategoryService";
 
+// DEĞERLENDİRME 7
 const CategoryDetail = () => {
     const { id } = useParams();
     const { category, updateCategory } = useContext(CategoryContext);

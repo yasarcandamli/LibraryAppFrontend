@@ -3,6 +3,7 @@ import axios from 'axios';
 const BASE_URL = import.meta.env.VITE_REACT_APP_API_BASE_URL; // API, from environmental variables 
 const API_URL = `${BASE_URL}/api/v1/books`; // Core API endpoint for Books
 
+// DEĞERLENDİRME 8
 // Function that brings all books
 export const getBooks = async () => {
     try {
@@ -13,6 +14,7 @@ export const getBooks = async () => {
     }
 };
 
+// DEĞERLENDİRME 8
 // Function that creates a new book
 export const createBook = async (book) => {
     try {
@@ -23,6 +25,7 @@ export const createBook = async (book) => {
     }
 };
 
+// DEĞERLENDİRME 8
 // Function that retrieves information from a specific book
 export const getBookById = async (id) => {
     try {
@@ -33,6 +36,7 @@ export const getBookById = async (id) => {
     }
 };
 
+// DEĞERLENDİRME 8
 // Function that updates a specific book
 export const updateBookById = async (id, book) => {
     try {
@@ -43,6 +47,7 @@ export const updateBookById = async (id, book) => {
     }
 };
 
+// DEĞERLENDİRME 8
 // Function that deletes a specific book
 export const deleteBookById = async (id) => {
     try {
